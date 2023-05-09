@@ -38,7 +38,7 @@ def has_daily_price_quota_exceed(license_no) -> bool:
 def save(payload):
     record = TollRecords(
         license_no=payload['license_no'],
-        vehicle_type_code=payload['vehicle_type'],
+        vehicle_type_code=payload['vehicle_code'],
         is_fee=payload['is_free'],
     )
     record.save()
